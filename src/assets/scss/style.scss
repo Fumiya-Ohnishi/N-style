@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+// reset
+@import "core/_reset";
+
+@import "layout/**/**_pc.scss";
+@import "project/**/**_pc.scss";
+
+
+@media only screen and (max-width: 960px) {
+  // layout sp
+  @import "layout/**/**_sp.scss";
+  // page sp
+  @import "project/**/**_sp.scss";
+}

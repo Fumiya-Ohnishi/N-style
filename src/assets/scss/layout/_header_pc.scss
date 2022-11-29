@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  width: 100%;
+  padding: 8px 54px;
+
+  &-nemu {
+    display: flex;
+    align-items: center;
+
+    &-item {
+      margin-right: 16px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &__link {
+        color: #fff;
+        font-size: 1.4rem;
+        text-decoration: none;
+      }
+    }
+  }
+}
