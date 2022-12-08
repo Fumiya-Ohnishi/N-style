@@ -1,6 +1,19 @@
 .p-top{
   &-firstView{
+    position: relative;
     width: 100vw;
+    height: calc(100vh - 82px);
+    
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-servise{
+    background: #000;
+    width: 100%;
     height: 100vh;
+    clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% calc(100% - 7vw), 0 100%);
   }
 }
