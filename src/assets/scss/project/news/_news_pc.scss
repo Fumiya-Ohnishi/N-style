@@ -1,0 +1,31 @@
+.newsList {
+  padding-top: 154px;
+
+  &-content{
+    padding: 74px 12% 72px;
+        &--inner{
+      padding: 0;
+    }
+  }
+
+  &-category {
+    &__btn {
+      width: 102px;
+      margin-right: 20px;
+      padding: 9px 0;
+      &:nth-child(odd) {
+        margin-right: 20px;
+      }
+    }
+  }
+  &-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+
+    &__btn{
+      margin-right: 20px;
+    }
+  }
+}

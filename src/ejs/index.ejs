@@ -1,55 +1,54 @@
-<%
-metaData = {
-  title: 'N-style',
-  description: 'top'
-};
-%>
+<% metaData = { title: 'N-style', description: 'top' }; %>
 <!DOCTYPE html>
 <html lang="ja">
-<%- include('./common/head.ejs',{meta:metaData})  %> 
-<body>
-  <%- include('./common/header.ejs') %> 
+  <%- include('./common/head.ejs',{meta:metaData}) %>
+  <body>
+    <%- include('./common/header.ejs') %>
 
-  <main>
-    <div class="p-top-firstView">
-      <img src="/assets/img/img-top-01.jpg" alt="ファーストビュー">
-    </div>
+    <main>
+      <div class="p-top-firstView js-topNews-flag">
+        <img src="/assets/img/img-top-01.jpg" alt="ファーストビュー" />
+        <div class="p-top-firstView-news js-top-firstNews">
+          <!-- ここに最新のニュース記事が表示されます。 -->
+        </div>
+      </div>
 
-    <div class="p-top-message">
+      <div class="p-top-message"></div>
 
-    </div>
+      <div class="p-top-message">
+        <ul class="js-top-newsList"></ul>
+      </div>
 
-    <div class="p-top-servise">
-      <ul>
-        <li>
-          <div class="">
-            <p class=""></p>
-            <img src="" alt="">
-            <p class=""></p>
-          </div>
-        </li>
-        <li>
-          <div class="">
-            <p class=""></p>
-            <img src="" alt="">
-            <p class=""></p>
-          </div>
-        </li>
-        <li>
-          <div class="">
-            <p class=""></p>
-            <img src="" alt="">
-            <p class=""></p>
-          </div>
-        </li>
-      </ul>
-    </div>
+      <div class="p-top-servise">
+        <ul>
+          <li>
+            <div class="">
+              <p class=""></p>
+              <img src="" alt="" />
+              <p class=""></p>
+            </div>
+          </li>
+          <li>
+            <div class="">
+              <p class=""></p>
+              <img src="" alt="" />
+              <p class=""></p>
+            </div>
+          </li>
+          <li>
+            <div class="">
+              <p class=""></p>
+              <img src="" alt="" />
+              <p class=""></p>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-    <div class="p-top-map">
+      <div class="p-top-map"></div>
+    </main>
 
-    </div>
-  </main>
-
-  <%- include('./common/footer.ejs') %> 
-</body>
+    <%- include('./common/footer.ejs') %>
+    <script src="/assets/js/bundle.js"></script>
+  </body>
 </html>
