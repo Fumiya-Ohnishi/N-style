@@ -1,7 +1,6 @@
-<% metaData = { title: 'N-style', description: 'top' }; %>
 <!DOCTYPE html>
 <html lang="ja">
-  <%- include('./common/head.ejs',{meta:metaData}) %>
+  <%- include('./common/head.ejs', { title: 'N-style', description: 'top' }) %>
   <body>
     <%- include('./common/header.ejs') %>
 
@@ -13,39 +12,90 @@
         </div>
       </div>
 
-      <div class="p-top-message"></div>
+      <div class="mod-inner">
+        <div class="p-top-message">
+          <h2 class="p-top-message__ttl">～出逢いに感謝！～</h2>
+          <p class="p-top-message__txt">
+            当社は、平成11年７月、愛媛県宇和島市にて自動車販売店を開店、<br />
+            平成17年１月には、有限会社エヌ・スタイルとして法人化しました。<br />
+            「クルマのある幸せで安全・快適な生活を安心して頂けるよう提案し、人々の暮らしの充実に貢献する」<br />
+            という経営理念のもと、お客様のニーズを満たす質の高いサービスを実践し、信頼を築いてまいりました。<br />
+            社会から信頼される企業市民として、モータリーゼーション（車社会化）を<br />
+            通じて社会活動の発展に貢献することを目標に絶えざる研鑽を積み、<br />
+            創意工夫を持って常に仕事に挑戦してきました。<br />
+            また、「自主」「自律」「自己責任」の精神にもとづき、<br />
+            従業員の働き甲斐と独創的な高い経営を目指した結果、<br />
+            業況も順調に発展し、地域の住民からも愛される企業として認知されるようになりました。<br />
+            今後も地元に根ざした経営を実践し、地域業界のリーディングカンパニーとして、<br />
+            愛媛県南予地方圏域になくてはならない企業としての地位を確立していきたいと思っています。
+          </p>
+        </div>
 
-      <div class="p-top-message">
-        <ul class="js-top-newsList"></ul>
+        <div class="p-top-news">
+          <%- include("./components/_title.ejs",{ addClass:"", ttl:"NEWS", subTtl:"お知らせ" }) %>
+          <ul class="p-top-news-list js-top-newsList">
+            <!-- ここに最新のニュース記事が表示されます。最大３つ -->
+          </ul>
+        </div>
+      </div>
+      <div class="p-top-service">
+        <div class="mod-inner">
+          <%- include("./components/_title.ejs",{ addClass:"p-top-service-ttl", ttl:"Service",
+          subTtl:"サービス" }) %>
+          <ul class="p-top-service-list">
+            <li class="p-top-service-item">
+              <p class="p-top-service-item__ttl">新車・中古車販売</p>
+              <img
+                class="p-top-service-item__img"
+                src="/assets/img/top/img-service-01.jpg"
+                alt=""
+              />
+              <p class="p-top-service-item__txt">良質なお車を低価格で 御提供させて頂きます。</p>
+            </li>
+            <li class="p-top-service-item">
+              <p class="p-top-service-item__ttl">アフターサービス</p>
+              <img
+                class="p-top-service-item__img"
+                src="/assets/img/top/img-service-02.jpg"
+                alt=""
+              />
+              <p class="p-top-service-item__txt">
+                迅速・丁寧にお客様の お車を点検・整備させて 頂いております。
+              </p>
+            </li>
+            <li class="p-top-service-item">
+              <p class="p-top-service-item__ttl">レンタカー事業</p>
+              <img
+                class="p-top-service-item__img"
+                src="/assets/img/top/img-service-03.jpg"
+                alt=""
+              />
+              <p class="p-top-service-item__txt">
+                低価格にて、 普通車・軽トラック等 ご用意させて頂いております。
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div class="p-top-servise">
-        <ul>
-          <li>
-            <div class="">
-              <p class=""></p>
-              <img src="" alt="" />
-              <p class=""></p>
-            </div>
-          </li>
-          <li>
-            <div class="">
-              <p class=""></p>
-              <img src="" alt="" />
-              <p class=""></p>
-            </div>
-          </li>
-          <li>
-            <div class="">
-              <p class=""></p>
-              <img src="" alt="" />
-              <p class=""></p>
-            </div>
-          </li>
-        </ul>
+      <div class="mod-inner">
+        <div class="p-top-map">
+          <%- include("./components/_title.ejs",{ addClass:"", ttl:"Access", subTtl:"アクセス" }) %>
+          <div class="p-top-map-area">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8971.905745650718!2d132.5406108471776!3d33.183441744037246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354f5f8a9927d77d%3A0x30ba73fe163e70ce!2z77yI5pyJ77yJ44Ko44OM44O744K544K_44Kk44Or!5e0!3m2!1sja!2sjp!4v1670686261272!5m2!1sja!2sjp"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <p class="p-top-map__txt">宇和島南ICからクルマで３分！「Ｎ．ｓｔｙｌｅ」の看板を目印にお越し下さい。</p>
+          <p class="p-top-map__txt">愛媛県宇和島市保田甲８７−１</p>
+        </div>
       </div>
-
-      <div class="p-top-map"></div>
     </main>
 
     <%- include('./common/footer.ejs') %>

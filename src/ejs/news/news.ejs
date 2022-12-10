@@ -1,12 +1,9 @@
-<%
-metaData = {
-  title: 'お知らせ | N-Style',
-  description: 'お知らせ一覧ページです。' 
-  }; 
-%>
 <!DOCTYPE html>
 <html lang="ja">
-  <%- include('../common/head.ejs',{meta:metaData}) %>
+  <%- include('../common/head.ejs',{ 
+    title: 'お知らせ | N-Style',
+    description: 'お知らせ一覧ページです。' 
+  }) %>
   <body>
     <%- include('../common/header.ejs') %>
 

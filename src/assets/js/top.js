@@ -55,7 +55,7 @@ export default function top() {
 
             topNewsCategory.insertAdjacentHTML(
               "beforeend",
-              `<a href="/news/news-content.html?id=${newsId}" class="news-item__link"><div class="news-item__dfn"><p class="news-item__day js-news-day">${newsDay}</p><p class="news-item__status">${newsCategory}</p></div><p class="news-item__text">${newsTitle}</p></a>`
+              `<li class="news-item"><a href="/news/news-content.html?id=${newsId}" class="news-item__link"><div class="news-item__dfn"><p class="news-item__day js-news-day">${newsDay}</p><p class="news-item__status">${newsCategory}</p></div><p class="news-item__text">${newsTitle}</p></a></li>`
             );
           }
         })

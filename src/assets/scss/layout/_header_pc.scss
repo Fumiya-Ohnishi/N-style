@@ -1,12 +1,15 @@
 .header {
+  position: fixed;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #000;
   width: 100%;
   padding: 24px 54px;
+  z-index: 2;
 
-  &-nemu {
+  &-nav {
     display: flex;
     align-items: center;
 

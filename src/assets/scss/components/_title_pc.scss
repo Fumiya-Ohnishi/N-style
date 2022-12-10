@@ -1,0 +1,19 @@
+.c-ttl {
+  display: inline-block;
+  border-bottom: solid 2px #000;
+
+  &__ttl{
+    margin-bottom: 30px;
+    font-family: $font_sans;
+    font-weight: $bold;
+    font-size: 4.5rem;
+  }
+
+  &__subTtl{
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: $font_sans;
+    font-weight: $normal;
+    font-size: 1.4rem;
+  }
+}
