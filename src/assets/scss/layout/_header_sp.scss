@@ -1,0 +1,79 @@
+.header {
+  position: relative;
+  padding: 8px 18px;
+
+  &-nav {
+    position: absolute;
+    top: 98px;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: calc(100vh - 98px);
+    background: #000;
+
+    &.active {
+      display: flex;
+    }
+
+    &-item{
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+
+
+  }
+}
+
+.openbtn1 {
+  position: relative; /*ボタン内側の基点となるためrelativeを指定*/
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+/*ボタン内側*/
+.openbtn1 span {
+  display: inline-block;
+  transition: all 0.4s; /*アニメーションの設定*/
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background: #fff;
+  width: 45%;
+}
+
+.openbtn1 span:nth-of-type(1) {
+  top: 15px;
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top: 23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top: 31px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.openbtn1.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0; /*真ん中の線は透過*/
+}
+
+.openbtn1.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}

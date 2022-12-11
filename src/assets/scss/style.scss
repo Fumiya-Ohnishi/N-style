@@ -12,6 +12,7 @@
 @media only screen and (max-width: 960px) {
   // layout sp
   @import "layout/**/**_sp.scss";
+  @import "components/**/**_sp.scss";
   // page sp
   @import "project/**/**_sp.scss";
 }
