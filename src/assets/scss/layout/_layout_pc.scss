@@ -7,3 +7,37 @@
 .only-pc {
   display: block;
 }
+
+.breadcrumb {
+  &__list {
+    display: flex;
+    align-items: center;
+    padding: 24px 0 16px;
+    &--news {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__item {
+    &::after {
+      content: ">";
+      margin: 0 14px;
+    }
+    &:last-child {
+      & .breadcrumb__link {
+        color: #5a5959;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #a2a2a2;
+  }
+}

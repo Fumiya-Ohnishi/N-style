@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../common/head.ejs', { title: 'お知らせ一覧 | N-style', description:
+  'お知らせ一覧ページです。' }) %>
+  <body>
+    <!--/ ===== header START ===== /-->
+
+    <%- include('../common/header.ejs') %>
+
+    <!--/ ===== header  END  ===== /-->
+
+    <!--/ ===== main START ===== /-->
+
+    <main id="index" role="main">
+      <!----- お知らせ Newsee ----->
+
+      <div class="newsList js-newsList-flag js-loading">
+        <div class="mod-inner">
+          <%- include("../components/_title.ejs",{ addClass:"", ttl:"NEWS", subTtl:"お知らせ" }) %>
+
+          <div class="breadcrumb">
+            <ul class="breadcrumb__list breadcrumb__list--news">
+              <li class="breadcrumb__item">
+                <a href="/index.html" class="breadcrumb__link">TOP</a>
+              </li>
+              <li class="breadcrumb__item">
+                <p class="breadcrumb__link"><span>お知らせ</span></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="newsList-content">
+          <div class="newsList-content--inner">
+            <div class="newsList-category">
+              <button type="button" class="newsList-category__btn is-active js-serachCategory">
+                すべて
+              </button>
+              <button type="button" class="newsList-category__btn js-serachCategory">
+                一般
+              </button>
+              <button type="button" class="newsList-category__btn js-serachCategory">
+                中古車入庫情報
+              </button>
+              <button type="button" class="newsList-category__btn js-serachCategory">
+                整備情報
+              </button>
+            </div>
+
+            <%- include("../components/_title.ejs",{ addClass:"", ttl:"News List", subTtl:"すべての記事一覧" }) %>
+          </div>
+
+          <ul class="news-list news-list--width js-news-list">
+            <!-- jsでリスト生成 -->
+          </ul>
+          <div class="newsList-pagination js-paginationBtn">
+            <!-- jsでボタン生成 -->
+          </div>
+        </div>
+      </div>
+
+      <!-- スムーススクロール -->
+
+
+    </main>
+
+    <!--/ ===== main  END  ===== /-->
+
+    <!--/ ===== footer START ===== /-->
+
+    <%- include('../common/footer.ejs') %>
+    <script src="/assets/js/bundle.js"></script>
+
+    <!--/ ===== footer  END  ===== /-->
+  </body>
+</html>

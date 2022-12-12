@@ -1,31 +1,119 @@
 .newsList {
-  padding-top: 154px;
+  padding-top: 102px;
 
-  &-content{
-    padding: 74px 12% 72px;
-        &--inner{
-      padding: 0;
+  &.is-active {
+    position: relative;
+    &::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #000;
+      opacity: 0.5;
+      z-index: 999;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      margin: 0 auto;
+      border: 8px solid #e0e0e0;
+      border-top: 7px solid #d9c75c;
+      border-radius: 50px;
+      animation: loading 1000ms linear 0ms infinite normal both;
+      z-index: 9999;
+    }
+    @keyframes loading {
+      0% {
+        transform: translate(-50%, -50%)rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%)rotate(360deg);
+      }
+    }
+  }
+
+  &-content {
+    padding: 44px 15% 0;
+    background: #fcfbf7;
+    &--inner {
+      padding: 44px 24px 0;
     }
   }
 
   &-category {
-    &__btn {
-      width: 102px;
-      margin-right: 20px;
-      padding: 9px 0;
-      &:nth-child(odd) {
-        margin-right: 20px;
-      }
-    }
-  }
-  &-pagination{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 24px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
 
-    &__btn{
-      margin-right: 20px;
+    &__btn {
+      width: calc(50% - 8px);
+      margin-bottom: 16px;
+      padding: 16px 0;
+      border: solid 1px #000;
+      border-radius: 28px;
+      color: #000;
+      font-size: 1.3rem;
+      font-family: $font_sans;
+      font-weight: $normal;
+      &:nth-child(odd) {
+        margin-right: 16px;
+      }
+      &.is-active {
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+  &-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 24px 56px;
+
+    &__btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: solid 1px #000;
+      background: #000;
+      color: #fff;
+      font-size: 1.6rem;
+      font-family: $font_sans;
+      font-weight: $normal;
+      margin-right: 17px;
+
+      &--arrow {
+        position: relative;
+        // margin-right: 0;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 8px;
+          height: 15px;
+          background: url(/assets/img/common/ico-arrow-gold.svg);
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+      &.is-active {
+        background: #000;
+        color: #fff;
+      }
     }
   }
 }

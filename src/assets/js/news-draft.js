@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 export default function newsDraft() {
   let loadingClass = document.getElementsByClassName("js-loading");
   let urlId = getParam("id");
@@ -19,8 +21,8 @@ export default function newsDraft() {
 
     const { createClient } = require("microcms-js-sdk");
     const client = createClient({
-      serviceDomain: "euglead",
-      apiKey: "e919af03209446d4863ac71f2e9d29d0d656",
+      serviceDomain: "n-style",
+      apiKey: "Yjv0e625KA87l4cDg6DB6bwQT2FknFGH1GSe",
     });
     client
       .get({

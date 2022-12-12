@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../common/head.ejs', { title: 'お知らせ一覧 | N-style', description:
+  'お知らせ詳細ページです。' }) %>
+
+  <body>
+    <!--/ ===== header START ===== /-->
+
+    <%- include('../common/header.ejs') %>
+
+    <!--/ ===== header  END  ===== /-->
+
+    <!--/ ===== main START ===== /-->
+
+    <main id="index" role="main">
+      <!----- お知らせ Newsee ----->
+
+      <div class="news-content js-loading js-newsContent-flag">
+        <div class="mod-inner">
+          <%- include("../components/_title.ejs",{ addClass:"", ttl:"NEWS", subTtl:"お知らせ" }) %>
+
+          <div class="breadcrumb">
+            <ul class="breadcrumb__list breadcrumb__list--news">
+              <li class="breadcrumb__item">
+                <a href="/index.html" class="breadcrumb__link">TOP</a>
+              </li>
+              <li class="breadcrumb__item">
+                <a href="/news/news-list.html" class="breadcrumb__link">お知らせ</a>
+              </li>
+              <li class="breadcrumb__item">
+                <p class="breadcrumb__link">お知らせ詳細</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="news-content-ttlArea">
+            <div class="news-content-ttlArea__dfn">
+              <p class="news-content-ttlArea__day js-newsContent-day"></p>
+              <p class="news-content-ttlArea__status js-newsContent-status"></p>
+            </div>
+            <h2 class="news-content-ttlArea__ttl js-newsContent-ttl"></h2>
+          </div>
+
+          <div class="news-content-txtArea js-news-content">
+            <!-- jsで中身を生成 -->
+          </div>
+
+          <div class="news-content__btn">
+            <a href="/news/news-list.html" class="news-content__link">お知らせ一覧へ</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- スムーススクロール -->
+    </main>
+
+    <!--/ ===== main  END  ===== /-->
+
+    <!--/ ===== footer START ===== /-->
+
+    <%- include('../common/footer.ejs') %>
+    <script src="/assets/js/bundle.js"></script>
+  </body>
+</html>

@@ -122,11 +122,11 @@
       content: "";
       position: absolute;
       top: 50%;
-      right: 24px;
+      right: 10px;
       transform: translateY(-50%);
       width: 7px;
       height: 12px;
-      background: url(/img/common/ico-arrow.svg);
+      background: url(/assets/img/common/ico-arrow.svg);
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -209,7 +209,22 @@
       transform: translateY(-50%);
       width: 15px;
       height: 18px;
-      background: url(/img/common/ico-arrow-white.svg);
+      background: url(/assets/img/common/ico-arrow-white.svg);
     }
+  }
+}
+
+.fadeInBottom.visible {
+animation: fadeInBottom 0.7s ease 0s 1 normal;
+}
+
+/* fadeInBottom */
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
   }
 }
