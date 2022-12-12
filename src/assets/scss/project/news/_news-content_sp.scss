@@ -6,15 +6,6 @@
     border-left: none;
     padding-left: 0;
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: -16%;
-      top: 70px;
-      width: 13%;
-      height: 1px;
-      background: #bba618;
-    }
   }
   &-txtArea{
     padding-bottom: 48px;
@@ -36,7 +27,7 @@
     &--disabled {
       background: #adadad;
       &.is-active {
-        background: #bba619;
+        background: #000;
       }
       &.is-confirm {
         min-width: 270px;
