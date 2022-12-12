@@ -1,5 +1,7 @@
 .p-top {
   &-firstView {
+    height: auto;
+    margin-top: 0;
     &-news {
       display: none;
     }

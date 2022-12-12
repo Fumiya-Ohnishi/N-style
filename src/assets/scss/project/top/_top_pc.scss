@@ -2,6 +2,8 @@
   &-firstView {
     position: relative;
     width: 100vw;
+    height: calc(100vh - 69px);
+    margin-top: 69px;
 
     & img {
       width: 100%;
@@ -215,7 +217,7 @@
 }
 
 .fadeInBottom.visible {
-animation: fadeInBottom 0.7s ease 0s 1 normal;
+  animation: fadeInBottom 0.7s ease 0s 1 normal;
 }
 
 /* fadeInBottom */

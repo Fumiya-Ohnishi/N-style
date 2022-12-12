@@ -8,11 +8,11 @@ export default function textFeadIn() {
       scrollTrigger: {
         trigger: target,
         start: "top 80%",
-        toggleActions: "restart none none none",
+        toggleActions: "play none none none",
         //markers: true,
       },
       opacity: 0,
-      yPercent: 30,
+      yPercent: 50,
     });
   });
 }
