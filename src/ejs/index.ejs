@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <%- include('./common/head.ejs', { title: 'N-style', description: 'top' }) %>
+  <%- include('./common/_head.ejs', { title: 'N-style', description: 'top' }) %>
   <body>
-    <%- include('./common/header.ejs') %>
+    <%- include('./common/_header.ejs') %>
     
     <main>
-      <%- include('./common/loader.ejs') %>
+      <%- include('./common/_loader.ejs') %>
 
       <div class="p-top-firstView js-topNews-flag">
         <img src="/assets/img/img-top-01.jpg" alt="ファーストビュー" />
@@ -110,7 +110,7 @@
       </div>
     </main>
 
-    <%- include('./common/footer.ejs') %>
+    <%- include('./common/_footer.ejs') %>
     <script src="/assets/js/bundle.js"></script>
   </body>
 </html>

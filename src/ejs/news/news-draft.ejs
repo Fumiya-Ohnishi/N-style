@@ -1,121 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="format-detection" content="telephone=no" />
-
-    <title>株式会社ユーグリード | お知らせ詳細</title>
-    <meta name="description" content="株式会社ユーグリードのお知らせ詳細ページです" />
-    <meta property="og:title" content="株式会社ユーグリード | お知らせ詳細" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://www.euglead.co.jp" />
-    <meta property="og:image" content="https://www.euglead.co.jp/img/common/ogp.jpg" />
-    <meta property="og:site_name" content="株式会社ユーグリード | お知らせ詳細" />
-    <meta property="og:description" content="株式会社ユーグリードのお知らせ詳細ページです" />
-
-    <!--/ ===== common ===== /-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <!--/ ===== css ===== /-->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
+  <%- include('../common/_head.ejs', { title: 'お知らせ一覧 | N-style', description:
+  'お知らせ下書きページです。' }) %>
 
   <body>
     <!--/ ===== header START ===== /-->
 
-    <header>
-      <div class="mod__inner">
-        <div class="headerArea">
-          <div class="headerTtl">
-            <a href="/index.html">
-              <h1 class="headerTtl__logo">
-                <img src="/img/header/ttl-logo.jpg" alt="euglead" />
-              </h1>
-            </a>
-          </div>
-
-          <nav class="headerNav js-navArea">
-            <div class="headerNav__wrapper">
-              <ul class="headerNav__list">
-                <li class="headerNav__item headerNav__item--border js-hoverAction">
-                  <a href="/news/news-list.html" class="headerNav__link">お知らせ</a>
-                </li>
-                <li class="headerNav__item js-headerNav__close js-hoverAction">
-                  <a href="/business/index.html" class="headerNav__link headerNav__link--margin"
-                    >事業内容</a
-                  >
-                  <!-- <div class="headerNav-hoverBox">
-                    <a href="/business/healthy-care.html" class="headerNav-hoverBox__txt"
-                      >ヘルスケア事業について</a
-                    >
-                    <a
-                      href="/business/healthy-care.html#js-expansionFood"
-                      class="headerNav-hoverBox__txt"
-                      >食品への展開について</a
-                    >
-                    <a
-                      href="/business/healthy-care.html#js-expansionCosmetics"
-                      class="headerNav-hoverBox__txt"
-                      >化粧品への展開について</a
-                    >
-                  </div> -->
-                </li>
-                <li class="headerNav__item js-hoverAction">
-                  <a href="/company.html" class="headerNav__link">会社情報</a>
-                </li>
-                <li class="headerNav__item js-hoverAction">
-                  <a href="/contact/index.html" class="headerNav__link">お問い合わせ</a>
-                </li>
-                <li class="headerNav__item js-headerNav__close js-hoverAction">
-                  <p class="headerNav__link headerNav__link--margin"
-                    >オンラインショップ</p
-                  >
-                  <div class="headerNav-hoverBox">
-                    <a href="https://www.euglenature.com/" target="_blank" rel="noopener noreferrer" class="headerNav-hoverBox__txt"
-                      >ECサイト</a
-                    >
-                    <a
-                      href="https://www.amazon.co.jp/stores/Euglenature/page/3D99C62F-D719-4418-9C59-42DDD350CAFC?ref_=ast_bln" target="_blank" rel="noopener noreferrer"
-                      class="headerNav-hoverBox__txt"
-                      >amazon</a
-                    >
-                  </div>
-                </li>
-                <li class="headerNav__item js-hoverAction">
-                  <a
-                    href="https://euglead-recruit.com/"
-                    class="headerNav__link headerNav__link--ico"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >採用情報</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </nav>
-
-          <div class="headerIco js-headerIco">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </div>
-    </header>
+    <%- include('../common/_header.ejs') %>
 
     <!--/ ===== header  END  ===== /-->
 
@@ -163,65 +54,12 @@
         </div>
       </div>
 
-      <!-- スムーススクロール -->
-
-      <div class="smoothScroll js-footNav">
-        <button type="button" class="smoothScroll__arrow js-footerBtn"></button>
-      </div>
-    </main>
-
     <!--/ ===== main  END  ===== /-->
 
     <!--/ ===== footer START ===== /-->
 
-    <footer class="footer">
-      <div class="mod__inner">
-        <div class="footerLogo">
-          <img src="/img/footer/ttl-logo.jpg" alt="euglead 会社ロゴ" />
-          <p><span>株式会社</span>ユーグリード</p>
-        </div>
-
-        <ul class="footerAccess footerAccess--sp">
-          <li class="footerAccess__num">〒799-0112</li>
-          <li class="footerAccess__txt">愛媛県四国中央市金生町山田井183番地</li>
-        </ul>
-
-        <div class="footerAccess footerAccess--pc">
-          <p>〒799-0112 愛媛県四国中央市金生町山田井183番地</p>
-        </div>
-
-        <ul class="footerContent footerContent--sp">
-          <li class="footerContact__tel">TEL：0896-22-4557</li>
-          <li class="footerContact__fax">FAX：0896-22-4559</li>
-          <li class="footerContact__mail">
-            e-mail：&#101;&#117;&#103;&#108;&#101;&#110;&#97;&#64;&#105;&#110;&#102;&#111;&#46;&#101;&#117;&#103;&#108;&#101;&#97;&#100;&#46;&#99;&#111;&#46;&#106;&#112;
-          </li>
-        </ul>
-
-        <div class="footerContent footerContent--pc">
-          <p>
-            TEL：0896-22-4557 ／ FAX：0896-22-4559 ／
-            e-mail：&#101;&#117;&#103;&#108;&#101;&#110;&#97;&#64;&#105;&#110;&#102;&#111;&#46;&#101;&#117;&#103;&#108;&#101;&#97;&#100;&#46;&#99;&#111;&#46;&#106;&#112;
-          </p>
-        </div>
-
-        <div class="footerImg">
-          <!-- <img src="/img/footer/ico-sns-fa.svg" alt="Facebookicon" /> -->
-          <!-- <img src="/img/footer/ico-sns-tw.svg" alt="Twittericon" /> -->
-          <a
-            href="https://www.instagram.com/euglenature_official/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="/img/footer/ico-sns-ins.svg" alt="Instagramicon" />
-          </a>
-        </div>
-
-        <div class="footerTxt">
-          <p>Copyright &copy; Euglead Inc.<br />All Rights Reserved.</p>
-        </div>
-      </div>
-    </footer>
+    <%- include('../common/_footer.ejs') %>
+    <script src="/assets/js/bundle.js"></script>
 
     <!--/ ===== footer  END  ===== /-->
 
