@@ -10,6 +10,13 @@
   padding: 24px 54px;
   z-index: 2;
 
+  &__ttl{
+    font-size: 3rem;
+    color: #fff;
+    text-decoration: none;
+    
+  }
+
   &-nav {
     display: flex;
     align-items: center;

@@ -87,6 +87,49 @@
         margin-top: 46px;
         font-size: 1.4rem;
       }
+
+      &__link {
+        position: relative;
+        display: inline-block;
+        padding: 0 20px;
+        margin-top: 16px;
+        font-size: 2rem;
+        color: #fff;
+        text-decoration: none;
+        outline: none;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -8px;
+          left: 20%;
+          width: 85%;
+          height: 1px;
+          background: #fff;
+          transition: all 0.3s;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -3px;
+          right: -5%;
+          width: 15px;
+          height: 1px;
+          background: #fff;
+          transform: rotate(35deg);
+          transition: all 0.3s;
+        }
+
+        /*hoverした際の移動*/
+        &:hover::before {
+          left: 30%;
+        }
+
+        &:hover::after {
+          right: -15%;
+        }
+      }
     }
   }
 
