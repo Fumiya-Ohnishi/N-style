@@ -4,6 +4,7 @@ export default function newsDraft() {
   let loadingClass = document.getElementsByClassName("js-loading");
   let urlId = getParam("id");
   let urlDraftKey = getParam("draftKey");
+  console.log(getParam("id"))
 
   // URL分割処理
   function getParam(name, url) {
@@ -29,18 +30,19 @@ export default function newsDraft() {
         endpoint: "news",
         contentId: urlId,
         queries: { draftKey: urlDraftKey },
+        limit: 1,
       })
       .then((res) => {
         loadingClass[0].classList.remove("is-active");
-
+        console.log(res.contents[0])
         const newsContent = document.getElementsByClassName("js-news-content");
         const newsContentDay = document.getElementsByClassName("js-newsContent-day");
         const newsContentStatus = document.getElementsByClassName("js-newsContent-status");
         const newsContentTtl = document.getElementsByClassName("js-newsContent-ttl");
-        const newsContentStatusText = res.category;
-        const newsContentTtlText = res.title;
+        const newsContentStatusText = res.contents[0].category;
+        const newsContentTtlText = res.contents[0].title;
 
-        newsContent[0].innerHTML = res.content;
+        newsContent[0].innerHTML = res.contents[0].content;
         newsContentStatus[0].innerText = newsContentStatusText;
         newsContentTtl[0].innerText = newsContentTtlText;
       })
